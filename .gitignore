@@ -1,0 +1,45 @@
+## .NET Core
+bin/
+obj/
+out/
+publish/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+## Visual Studio
+.vs/
+.vscode/
+*.swp
+*._*
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+## Databases
+*.mdf
+*.ldf
+*.sdf
+
+## App settings
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+## Migration backups
+**/Migrations/*.Designer.cs
+**/Migrations/*.cs
+!**/Migrations/InitialCreate.cs
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
