@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace OurDecor.Models
 {
@@ -32,6 +34,7 @@ namespace OurDecor.Models
         public int ProductTypeId { get; set; }
 
         [ForeignKey("ProductTypeId")]
+        [ValidateNever]
         public virtual ProductType ProductType { get; set; } = null!;
 
         public virtual ICollection<ProductMaterial> ProductMaterials { get; set; } = new List<ProductMaterial>();

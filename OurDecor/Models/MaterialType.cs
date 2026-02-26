@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace OurDecor.Models
 {
@@ -19,6 +20,7 @@ namespace OurDecor.Models
         [Column("defect_percentage")]
         public decimal DefectPercentage { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<Material> Materials { get; set; } = new List<Material>();
     }
 }
