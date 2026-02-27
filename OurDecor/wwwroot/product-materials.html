@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наш декор - Материалы продукта</title>
+    <link rel="icon" type="image/x-icon" href="/images/Наш декор.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="/images/Наш декор.png" alt="Наш декор" class="logo">
+            <h1 id="product-title">Материалы для продукции</h1>
+        </header>
+
+        <div class="product-info" id="product-info">
+        </div>
+
+        <div class="materials-table">
+            <h2>Необходимые материалы</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Наименование материала</th>
+                        <th>Количество</th>
+                        <th>Ед. измерения</th>
+                        <th>Цена за ед.</th>
+                        <th>Общая стоимость</th>
+                    </tr>
+                </thead>
+                <tbody id="materials-list">
+                    <tr>
+                        <td colspan="5" class="loading">Загрузка...</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="total-row">
+                        <td colspan="4" class="total-label"><strong>Итого себестоимость:</strong></td>
+                        <td id="total-cost" class="total-value"><strong>0.00 ₽</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="form-actions">
+            <button type="button" class="btn btn-secondary" onclick="history.back()">
+                ← Назад к списку
+            </button>
+        </div>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/material.js"></script>
+</body>
+</html>

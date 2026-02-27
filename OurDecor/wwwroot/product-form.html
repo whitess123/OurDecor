@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наш декор - Редактирование продукции</title>
+    <link rel="icon" type="image/x-icon" href="/images/Наш декор.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="/images/Наш декор.png" alt="Наш декор" class="logo">
+            <h1 id="form-title">Добавление продукции</h1>
+        </header>
+
+        <form id="product-form" class="product-form">
+            <input type="hidden" id="product-id" name="id">
+
+            <div class="form-group">
+                <label for="article">Артикул:</label>
+                <input type="text" id="article" name="article" required
+                       placeholder="Введите артикул">
+            </div>
+
+            <div class="form-group">
+                <label for="product-type">Тип продукта:</label>
+                <select id="product-type" name="productTypeId" required>
+                    <option value="">Выберите тип</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Наименование:</label>
+                <input type="text" id="name" name="name" required
+                       placeholder="Введите наименование">
+            </div>
+
+            <div class="form-group">
+                <label for="min-price">Минимальная стоимость для партнера (₽):</label>
+                <input type="number" id="min-price" name="minPartnerPrice"
+                       step="0.01" min="0" required
+                       placeholder="0.00">
+                <small class="hint">Значение не может быть отрицательным</small>
+            </div>
+
+            <div class="form-group">
+                <label for="roll-width">Ширина рулона (м):</label>
+                <input type="number" id="roll-width" name="rollWidth"
+                       step="0.01" min="0" required
+                       placeholder="0.00">
+                <small class="hint">Значение не может быть отрицательным</small>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" onclick="history.back()">
+                    ← Назад
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    Сохранить
+                </button>
+            </div>
+        </form>
+
+        <div id="error-message" class="error-message" style="display: none;"></div>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/products.js"></script>
+</body>
+</html>
